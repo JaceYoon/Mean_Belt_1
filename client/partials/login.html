@@ -1,0 +1,9 @@
+<div class="container">
+
+  <p style="color:red" ng-repeat='error in errors'>{{error}}</p>
+
+  <form ng-submit="login()">
+    <input type="text" placeholder="Enter your name here" ng-model="LogReg.name">
+    <button class="btn btn-success btn-xs" type="submit" name="button">Login or Regi</button>
+  </form>
+</div>

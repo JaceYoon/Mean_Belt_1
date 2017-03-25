@@ -1,0 +1,30 @@
+<div class="container">
+    <h4 style="margin-left:900px" >Welcome <span style="color:green">{{curUser.name}}</span> |   <a href="/logout" style="font-size:20px; color:lightblue;">Logout</a></h4>
+  <hr>
+    <p><a href="#/add"><button type="submit" ng-click="" class="btn btn-primary btn-s">Create a New Poll</button></a></p>
+
+</div>
+
+<div class="container" ng-controller='questionController'>
+  <div class="container">
+    <h2>Question List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="success">Name</th>
+          <th class="info">Survey Question</th>
+          <th class="warning">Date Posted</th>
+          <th class="danger">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='question in questions'>
+          <td>{{question.created_by}}</td>
+          <td><a href="#/show/{{question._id}}">{{question.title}}</a></td>
+          <td>{{question.date_added | date:'medium' }}</td>
+          <td><button type="submit" class="btn btn-warning btn-s" ng-if="question._user == curUser._id" ng-click="delete(question._id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container" ng-controller="questionController">
+  <h4 style="margin-left:1000px; text-decoration: underline;"><a href="#/dash">Go back</a></h4>
+
+  <h2>{{question.title}}</h2>
+  <h5>Click the Vote button to choose one!</h5>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="warning">Option</th>
+        <th class="info">Current Count of Votes</th>
+        <th class="danger">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{question.optionOne}}</td>
+        <td><a>{{question.optionOne_vote}}</a></td>
+        <td><button ng-click="vote_one()" type="submit" class="btn btn-warning btn-s">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{question.optionTwo}}</td>
+        <td><a>{{question.optionTwo_vote}}</a></td>
+        <td><button ng-click="vote_two()" type="submit" class="btn btn-success btn-s">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{question.optionThree}}</td>
+        <td><a>{{question.optionThree_vote}}</a></td>
+        <td><button ng-click="vote_three()" type="submit" class="btn btn-danger btn-s">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{question.optionFour}}</td>
+        <td><a>{{question.optionFour_vote}}</a></td>
+        <td><button ng-click="vote_four()" type="submit" class="btn btn-info btn-s">Vote</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

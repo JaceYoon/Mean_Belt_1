@@ -1,0 +1,25 @@
+<div class="container">
+  <h4 style="margin-left:1000px; text-decoration: underline;"><a href="#/dash">Cancel</a></h4>
+  <h2>Put the question and options here: </h2>
+
+  <p style="color:red;"ng-repeat='error in errors'>{{error}}</p>
+
+  <form ng-submit="create()">
+    Question : <input type="text" placeholder="Question Title?" ng-model="question.title">
+    <br>
+    <br>
+    Option 1 : <input type="text" placeholder="Option1" ng-model="question.optionOne">
+    <br>
+    <br>
+    Option 2 : <input type="text" placeholder="Option2" ng-model="question.optionTwo">
+    <br>
+    <br>
+    Option 3 : <input type="text" placeholder="Option3" ng-model="question.optionThree">
+    <br>
+    <br>
+    Option 4 : <input type="text" placeholder="Option4" ng-model="question.optionFour">
+    <br>
+    <br>
+    <button type="submit" name="button" class="btn btn-primary btn-s">Create Poll</button>
+  </form>
+</div>
